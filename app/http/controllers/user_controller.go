@@ -2,7 +2,7 @@
  * @Author: Jadedever
  * @Date: 2022-06-24 16:30:07
  * @LastEditors: Jadedever
- * @LastEditTime: 2022-07-05 22:45:42
+ * @LastEditTime: 2022-07-05 22:49:06
  * @FilePath: /goravel/app/http/controllers/user_controller.go
  * @Description:
  *
@@ -23,7 +23,7 @@ type UserController struct {
 func (r UserController) Show(ctx *gin.Context) {
 
 	var users []models.User
-	facades.DB.Find(&users, []int{1, 2, 30})
+	facades.DB.Find(&users)
 	facades.Response.Success(ctx, users)
 }
 
